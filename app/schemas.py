@@ -5,5 +5,5 @@ class Userresponse(BaseModel):
     name:str
     email:str
 
-    class config:
-        from_attributes=True
+    class Config:    # a special inner class used to configure the pydantic models
+        from_attributes=True   #it is used to directly read the ORM objects
