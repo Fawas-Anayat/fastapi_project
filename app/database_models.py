@@ -6,6 +6,7 @@ base=declarative_base()
 class user(base):
 
     __tablename__="user"
-
-    name=Column(String,primary_key=True,index=True)
+    
+    id=Column(String,primary_key=True)
+    name=Column(String,index=True)
     email=Column(String,unique=True)
